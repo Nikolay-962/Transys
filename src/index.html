@@ -422,71 +422,32 @@
           <h2 class="a-title a-title--white">Наша команда</h2>
         </div>
         <div class="team__faces faces">
+          {% set faceList = [
+          {img: "img/member1.jpg", alt: "портрет девушки"},
+          {img: "img/member2.jpg", alt: "портрет девушки"},
+          {img: "img/member3.jpg", alt: "портрет девушки"},
+          {img: "img/member4.jpg", alt: "портрет девушки"},
+          {img: "img/member5.jpg", alt: "портрет девушки"},
+          {img: "img/member6.jpg", alt: "портрет девушки"},
+          {img: "img/member7.jpg", alt: "портрет девушки"},
+          {img: "img/member8.jpg", alt: "портрет девушки"},
+          {img: "img/member9.jpg", alt: "портрет девушки"},
+          {img: "img/member10.jpg", alt: "портрет девушки"},
+          {img: "img/member11.jpg", alt: "портрет девушки"},
+          {img: "img/member12.jpg", alt: "портрет девушки"}
+          ] %}
           <div class="faces__wrap">
             <div class="faces__item">
             </div>
             <div class="faces__item">
             </div>
+            {% for faceItem in faceList %}
             <div class="faces__item face">
               <div class="face__cover">
-                <img src="img/member1.jpg" alt="портрет девушки" class="face__img">
+                <img src="{{ faceItem.img }}" alt="{{ faceItem.alt }}" class="face__img">
               </div>
             </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member2.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member3.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member4.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member5.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member6.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member7.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member8.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member9.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member10.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member11.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
-            <div class="faces__item face">
-              <div class="face__cover">
-                <img src="img/member12.jpg" alt="портрет девушки" class="face__img">
-              </div>
-            </div>
+            {% endfor %}
             <div class="faces__item">
             </div>
             <div class="faces__item">
@@ -533,8 +494,8 @@
                     <div class="r-head__data">29 янв. 2019 г. 19:04</div>
                   </div>
                   <div class="r-head__right">
-                    <label for="1" class="check option">
-                      <input type="checkbox" class="check__input" id="1">
+                    <label class="check option">
+                      <input type="checkbox" class="check__input">
                       <span class="check__box">
                         <svg class="check__img">
                           <use xlink:href="img/svg/sprite.svg#heart"></use>

@@ -10,7 +10,6 @@ buttonMenu.addEventListener('click', () => {
   if (menuList.classList.contains('show')) {
     menuList.classList.remove('show');
     //adresMenu.classList.remove('active');
-
   } else {
     menuList.classList.add('show');
     //adresMenu.classList.add('active');
@@ -20,7 +19,6 @@ buttonMenu.addEventListener('click', () => {
 const headerColor = document.querySelector('.header');
 window.addEventListener('scroll', () => {
   let scrollDistance = window.scrollY;
-
   if (scrollY == 0) {
     headerColor.classList.remove('header--scroll');
     buttonCalor.classList.remove('h-button__btn--blue');
