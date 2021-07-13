@@ -37,13 +37,19 @@ body {
 }
 .page-top {
   min-height: 100vh;
+  @include media-down(md) {
+    min-height: 70vh;
+  } 
   &__wrap {       
     background-image: url('../img/fura1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 100vh;   
+    min-height: 100vh;
+    @include media-down(md) {
+      min-height: 70vh;
+    }   
     @include media-down(xs) {
       padding-bottom: 66px;
     }
