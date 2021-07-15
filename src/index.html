@@ -389,25 +389,20 @@
           <div class="guarantee__main g-main">
             <div class="g-main__wrap">
               <div class="g-main__ad promises">
+                {% set promisesList = [
+                {number: "1", text: "Подача транспорта<br> в день обращения"},
+                {number: "2", text: "Собственный автопарк"},
+                {number: "3", text: "Экипаж 2 водителя"},
+                ] %}
                 <ul class="promises__list">
+                  {% for promisesItem in promisesList %}
                   <li class="promises__item">
-                    <div class="promises__number">1</div>
+                    <div class="promises__number">{{ promisesItem.number }}</div>
                     <div class="promises__text">
-                      Подача транспорта<br> в день обращения
+                      {{ promisesItem.text }}
                     </div>
                   </li>
-                  <li class="promises__item">
-                    <div class="promises__number">2</div>
-                    <div class="promises__text">
-                      Собственный автопарк
-                    </div>
-                  </li>
-                  <li class="promises__item">
-                    <div class="promises__number">3</div>
-                    <div class="promises__text">
-                      Экипаж 2 водителя
-                    </div>
-                  </li>
+                  {% endfor %}
                 </ul>
               </div>
               <div class="g-main__visual g-visual">
@@ -479,298 +474,70 @@
           </div>
         </div>
       </section>
+
       <section class="recommendation">
         <div class="recommendation__title">
           <h2 class="a-title">Нас рекомендуют</h2>
         </div>
         <div class="recommendation__description">Согласитесь, это важно.</div>
         <div class="recommendation__track">
+          {% set cardList = [
+          {name: "Фамилия Имя", data: "29 янв. 2019 г. 19:04", text: "Хочу выразить благодарность компании Трансис за
+          оказанные услуги по доставке товаров из Москвы.
+          Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
+          менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!"},
+          {name: "Фамилия Имя", data: "29 янв. 2019 г. 19:04", text: "Хочу выразить благодарность компании Трансис за
+          оказанные услуги по доставке товаров из Москвы.
+          Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
+          менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!"},
+          {name: "Фамилия Имя", data: "29 янв. 2019 г. 19:04", text: "Хочу выразить благодарность компании Трансис за
+          оказанные услуги по доставке товаров из Москвы.
+          Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
+          менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!"},
+          {name: "Фамилия Имя", data: "29 янв. 2019 г. 19:04", text: "Хочу выразить благодарность компании Трансис за
+          оказанные услуги по доставке товаров из Москвы.
+          Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
+          менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!"},
+          {name: "Фамилия Имя", data: "29 янв. 2019 г. 19:04", text: "Хочу выразить благодарность компании Трансис за
+          оказанные услуги по доставке товаров из Москвы.
+          Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
+          менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!"},
+          ] %}
           <ul class="recommendation__list">
+            {% for cardItem in cardList %}
             <li class="recommendation__item r-card">
               <div class="r-card__wrap">
                 <div class="r-card__head r-head">
                   <div class="r-head__left">
-                    <div class="r-head__name">Фамилия Имя</div>
-                    <div class="r-head__data">29 янв. 2019 г. 19:04</div>
+                    <div class="r-head__name">{{ cardItem.name }}</div>
+                    <div class="r-head__data">{{ cardItem.data }}</div>
                   </div>
+                  {% set heartList = [
+                  {img: "img/svg/sprite.svg#heart"},
+                  {img: "img/svg/sprite.svg#heart"},
+                  {img: "img/svg/sprite.svg#heart"},
+                  {img: "img/svg/sprite.svg#heart"},
+                  {img: "img/svg/sprite.svg#heart"}
+                  ] %}
                   <div class="r-head__right">
+                    {% for heartItem in heartList %}
                     <label class="check option">
                       <input type="checkbox" class="check__input">
                       <span class="check__box">
                         <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
+                          <use xlink:href="{{ heartItem.img }}"></use>
                         </svg>
                       </span>
                     </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
+                    {% endfor %}
                   </div>
                 </div>
                 <p class="r-card__text">
-                  Хочу выразить благодарность компании Трансис за оказанные услуги по доставке товаров из Москвы.
-                  Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
-                  менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!
+                  {{ cardItem.text }}
                 </p>
               </div>
             </li>
-            <li class="recommendation__item r-card">
-              <div class="r-card__wrap">
-                <div class="r-card__head r-head">
-                  <div class="r-head__left">
-                    <div class="r-head__name">Фамилия Имя</div>
-                    <div class="r-head__data">29 янв. 2019 г. 19:04</div>
-                  </div>
-                  <div class="r-head__right">
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <p class="r-card__text">
-                  Хочу выразить благодарность компании Трансис за оказанные услуги по доставке товаров из Москвы.
-                  Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
-                  менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!
-                </p>
-              </div>
-            </li>
-            <li class="recommendation__item r-card">
-              <div class="r-card__wrap">
-                <div class="r-card__head r-head">
-                  <div class="r-head__left">
-                    <div class="r-head__name">Фамилия Имя</div>
-                    <div class="r-head__data">29 янв. 2019 г. 19:04</div>
-                  </div>
-                  <div class="r-head__right">
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <p class="r-card__text">
-                  Хочу выразить благодарность компании Трансис за оказанные услуги по доставке товаров из Москвы.
-                  Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
-                  менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!
-                </p>
-              </div>
-            </li>
-            <li class="recommendation__item r-card">
-              <div class="r-card__wrap">
-                <div class="r-card__head r-head">
-                  <div class="r-head__left">
-                    <div class="r-head__name">Фамилия Имя</div>
-                    <div class="r-head__data">29 янв. 2019 г. 19:04</div>
-                  </div>
-                  <div class="r-head__right">
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <p class="r-card__text">
-                  Хочу выразить благодарность компании Трансис за оказанные услуги по доставке товаров из Москвы.
-                  Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
-                  менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!
-                </p>
-              </div>
-            </li>
-            <li class="recommendation__item r-card">
-              <div class="r-card__wrap">
-                <div class="r-card__head r-head">
-                  <div class="r-head__left">
-                    <div class="r-head__name">Фамилия Имя</div>
-                    <div class="r-head__data">29 янв. 2019 г. 19:04</div>
-                  </div>
-                  <div class="r-head__right">
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img ">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                    <label class="check option">
-                      <input type="checkbox" class="check__input">
-                      <span class="check__box">
-                        <svg class="check__img">
-                          <use xlink:href="img/svg/sprite.svg#heart"></use>
-                        </svg>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <p class="r-card__text">
-                  Хочу выразить благодарность компании Трансис за оказанные услуги по доставке товаров из Москвы.
-                  Быстро,качественно, всегда в срок. Работаю с ними уже 2 года и никаких нареканий. Особую благодарность
-                  менеджеру Тане за терпение, а водителю Андрею за скорость заставки. Успехов!
-                </p>
-              </div>
-            </li>
+            {% endfor %}
           </ul>
         </div>
         <div class="recommendation__description-bottom">
@@ -778,42 +545,23 @@
         </div>
       </section>
       <section class="firms">
+        {% set firmList = [
+        {hrerf: "#", img: "img/firm1.svg"},
+        {hrerf: "#", img: "img/firm2.svg"},
+        {hrerf: "#", img: "img/firm3.svg"},
+        {hrerf: "#", img: "img/firm4.svg"},
+        {hrerf: "#", img: "img/firm5.svg"},
+        {hrerf: "#", img: "img/firm6.svg"},
+        {hrerf: "#", img: "img/firm7.svg"}
+        ] %}
         <div class="firms__wrap">
+          {% for firmItem in firmList %}
           <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm1.svg" alt="Название фирмы" class="firms__img">
+            <a href="{{ firmItem.href }}" class="firms__link">
+              <img src="{{ firmItem.img }}" alt="Название фирмы" class="firms__img">
             </a>
           </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm2.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm3.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm4.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm5.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm6.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
-          <div class="firms__item">
-            <a href="#" class="firms__link">
-              <img src="img/firm7.svg" alt="Название фирмы" class="firms__img">
-            </a>
-          </div>
+          {% endfor %}
         </div>
       </section>
       <section class="price">
