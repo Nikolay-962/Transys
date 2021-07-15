@@ -1808,7 +1808,7 @@ body
 {
     display: flex;
 
-    flex-basis: 30%;
+    flex-basis: 25%;
     justify-content: space-between;
 }
 
@@ -1863,14 +1863,11 @@ body
 
 .check__box
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-
     display: block;
 
     width: 1em;
     height: 1em;
+    margin-left: 4px;
 }
 
 .check__img

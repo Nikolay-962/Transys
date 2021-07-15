@@ -2036,7 +2036,7 @@ body {
     line-height: 18px;
   }
   &__right {
-    flex-basis: 30%;
+    flex-basis: 25%;
     display: flex;
     justify-content: space-between;
   }
@@ -2072,9 +2072,7 @@ body {
     clip-path: inset(100%);
   }
   &__box { 
-    position: absolute;
-    top: 0;
-    left: 0;   
+    margin-left: 4px;   
     width: 1em;
     height: 1em;
     display: block;

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="blue">
+  <meta name="description" content="Для тех кто занимается перевозками">
+  <meta name="keywords"
+    content="Рефрижираторы, контейнеры, Тягачи, Негабаритные грузы, Железнодорожные перевозки, Авио-сообщения">
   <title>Transys</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -523,11 +526,11 @@
                     {% for heartItem in heartList %}
                     <label class="check option">
                       <input type="checkbox" class="check__input">
-                      <span class="check__box">
+                      <div class="check__box">
                         <svg class="check__img">
                           <use xlink:href="{{ heartItem.img }}"></use>
                         </svg>
-                      </span>
+                      </div>
                     </label>
                     {% endfor %}
                   </div>
