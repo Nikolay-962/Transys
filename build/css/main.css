@@ -81,8 +81,8 @@ body
     left: 50%;
 
     transform: translateX(-50%);
-    -webkit-animation: vibration 2s infinite ease-in-out;
-            animation: vibration 2s infinite ease-in-out;
+    -webkit-animation: vibration 1.3s infinite ease-in-out;
+            animation: vibration 1.3s infinite ease-in-out;
 }
 
 @-webkit-keyframes vibration
@@ -1888,6 +1888,8 @@ body
 
 .firms__wrap
 {
+    position: relative;
+
     display: grid;
 
     margin: 114px 0 98px;
@@ -1907,6 +1909,26 @@ body
 .firms__img:hover
 {
     filter: grayscale(0%);
+}
+
+.firms__title
+{
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
 }
 
 .price__wrap
@@ -2048,6 +2070,31 @@ body
 
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+.mep
+{
+    position: relative;
+}
+
+.mep__title
+{
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
 }
 
 .m-visual__img

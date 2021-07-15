@@ -63,7 +63,8 @@
                 </li>
                 {% for navItem in navList %}
                 <li class="nav__item">
-                  <a href="{{ navItem.href }}" class="nav__link {%if navItem.isStrong%} nav__link--active {%endif%}">{{
+                  <a href="{{ navItem.href }}"
+                    class="nav__link {% if navItem.isStrong %} nav__link--active {% endif %}">{{
                     navItem.text }}</a>
                 </li>
                 {% endfor %}
@@ -236,7 +237,7 @@
           {% for transportItem in transportList %}
           <div class="transport__item  {{transportItem.mod}} card">
             <div class="card__visual {{ transportItem.vid }}">
-              <img src="{{ transportItem.img }}" srcset="{{ transportItem.srcset }}" alt="{{ transportItem.alt }}"
+              <img src="{{ transportItem.img }}" alt="{{ transportItem.alt }}"
                 class="card__img {{ transportItem.class }}">
             </div>
             <div class="card__description">{{ transportItem.text }}</div>
@@ -474,7 +475,6 @@
           </div>
         </div>
       </section>
-
       <section class="recommendation">
         <div class="recommendation__title">
           <h2 class="a-title">Нас рекомендуют</h2>
@@ -545,6 +545,7 @@
         </div>
       </section>
       <section class="firms">
+        <h2 class="firms__title">Фирмы</h2>
         {% set firmList = [
         {hrerf: "#", img: "img/firm1.svg"},
         {hrerf: "#", img: "img/firm2.svg"},
@@ -621,6 +622,7 @@
         </div>
       </section>
       <section class="mep">
+        <h2 class="mep__title">Карта</h2>
         <div class="mep__wrap m-visual">
           <div class="m-visual__cover">
             <img src="img/mep.jpg" srcset="img/mep@2x.jpg" alt="карта" class="m-visual__img">
