@@ -601,25 +601,20 @@
             </form>
           </div>
           <div class="price__services promises promises--price">
+            {% set priceList = [
+            {number: "1", text: "Подберем 2-3 варианта<br> транспорта за 60 минут по<br> цене от 0,5 евро за 1 км."},
+            {number: "2", text: "Согласуем ставку исходя<br> из ваших условий"},
+            {number: "3", text: "Снизим расходы на доставку<br> до 20% за счёт собственного<br> транспорта"},
+            ] %}
             <ul class="promises__list promises__list--price">
+              {% for priceItem in priceList %}
               <li class="promises__item promises__item--price">
-                <div class="promises__number promises__number--price">1</div>
+                <div class="promises__number promises__number--price">{{ priceItem.number }}</div>
                 <div class="promises__text promises__text--price">
-                  Подберем 2-3 варианта<br> транспорта за 60 минут по<br> цене от 0,5 евро за 1 км.
+                  {{ priceItem.text }}
                 </div>
               </li>
-              <li class="promises__item promises__item--price">
-                <div class="promises__number promises__number--price">2</div>
-                <div class="promises__text promises__text--price">
-                  Согласуем ставку исходя<br> из ваших условий
-                </div>
-              </li>
-              <li class="promises__item promises__item--price">
-                <div class="promises__number promises__number--price">3</div>
-                <div class="promises__text promises__text--price">
-                  Снизим расходы на доставку<br> до 20% за счёт собственного<br> транспорта
-                </div>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </div>

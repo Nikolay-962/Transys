@@ -1941,6 +1941,8 @@ body
 
 .price__know
 {
+    z-index: 8;
+
     margin: -14px 0;
     margin-right: 30px;
 
