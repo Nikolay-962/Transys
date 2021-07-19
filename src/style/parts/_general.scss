@@ -1160,7 +1160,7 @@ body {
 // transport
 // contact
 .contact {
-  background: linear-gradient(171deg, white, white 30%, #0A6397 30.1%, #0A6397 100%);
+  background: linear-gradient(171deg, white, white 28%, #0A6397 28.1%, #0A6397 100%);
   overflow: hidden;
   position: relative;
   margin-top: 76px;
@@ -1170,6 +1170,16 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+  &__content {
+    margin-top: 40px;
+  }
+}
+.c-visual {
+  &__img {
+    @include media-down(md) {
+      width: 259px;
+    }
   }
 }
 .c-head {
@@ -1200,7 +1210,6 @@ body {
   &__wrap {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 20px;
     margin-top: -200px;
     padding-bottom: 40px;
   }
@@ -1232,6 +1241,8 @@ body {
     }
   }
   &__wrap {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 190px 1fr;
     @include media-down(sm) {
@@ -1247,7 +1258,7 @@ body {
     text-shadow: -1px 1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff;
     text-align: center;
     color: #0A6397;
-    @include media-down(sm) {
+    @include media-down(xs) {
       font-size: 24px;
     }
   }
@@ -1265,6 +1276,8 @@ body {
       width: 328px;
       height: 100px;
       @include media-down(lg) {
+        right: 23%;
+        top: 41%;
         width: 238px;
         height: 74px;
       }
@@ -1275,10 +1288,11 @@ body {
       width: 300px;
       height: 35px;
       @include media-down(lg) {
-        top: 44%;
+        top: 46%;
         right: 18%;
         width: 217px;
         height: 26px;
+        transform: rotateY(180deg);
       }
     }
     &--cloud2 {
@@ -1287,7 +1301,7 @@ body {
       width: 212px;
       height: 41px;
       @include media-down(lg) {
-        top: 37%;
+        top: 36%;
         left: 36%;
         width: 154px;
         height: 30px;
@@ -1299,7 +1313,7 @@ body {
       width: 110px;
       height: 22px;
       @include media-down(lg) {
-        top: 28%;
+        top: 26%;
         right: 10%;
         width: 80px;
         height: 16px;
@@ -1310,61 +1324,116 @@ body {
       left: 20%;
       width: 300px;
       height: 35px;
+      @include media-down(lg) {
+        top: 50%;
+        left: 12%;
+        width: 216px;
+        height: 26px;
+        transform: rotateY(180deg);
+      }
     }
     &--cloud5 {
-      top: 53%;
+      top: 52%;
       right: 12%;
       width: 212px;
       height: 41px;
+      z-index: 1;
+      @include media-down(lg) {
+        top: 56%;
+        left: 28%;
+        width: 132px;
+        height: 26px;
+      }
     }
     &--cloud6 {
       top: 58%;
       right: 30%;
       width: 110px;
       height: 22px;
+      @include media-down(lg) {
+        top: 60%;
+      }
     }
     &--ship {
       top: 59%;
-      right: 4%;
+      right: 1%;
       width: 668px;
       height: 328px;
+      z-index: 1;
+      @include media-down(lg) {
+        top: 72%;
+        left: 2%;
+        width: 544px;
+        height: 172px;
+      }
     }
     &--cloud7 {
       top: 62%;
       left: 3%;
       width: 300px;
       height: 35px;
+      @include media-down(lg) {
+        top: 64%;
+        left: 68%;
+        width: 216px;
+        height: 26px;
+        transform: rotateY(180deg);
+      }
     }
     &--cloud8 {
       top: 65%;
       left: 13%;
       width: 110px;
       height: 22px;
+      @include media-down(lg) {
+        display: none;
+      }
     }
     &--cloud9 {
       top: 70%;
       left: 5%;
       width: 300px;
       height: 35px;
+      @include media-down(lg) {
+        display: none;
+      }
     }
     &--cloud10 {
       top: 74%;
       left: 1%;
       width: 110px;
       height: 22px;
+      @include media-down(lg) {
+        top: 74%;
+        left: 1%;
+        width: 110px;
+        height: 22px;
+        @include media-down(lg) {
+          top: 69%;
+          left: 34%;
+          width: 72px;
+          height: 16px;
+        }
+      }
     }
     &--cloud11 {
       top: 67%;
       left: 32%;
       width: 212px;
       height: 41px;
+      @include media-down(lg) {
+        top: 71%;
+        left: 26%;
+        width: 72px;
+        height: 16px;
+      }
     }
   }
   &__img {
     width: 100%;
     height: auto;
     fill: #0A6397;
-    stroke: #074F79;
+    stroke: #044164;
   }
 }
 .f-contact {
@@ -2163,507 +2232,3 @@ body {
   color: #757E85;
 }
 
-/*
-.contact {
-  margin-top: 100px;
-  @include media-down(xs) {
-    margin-top: 20px;
-  } 
-  &__head {
-    max-width: 36%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0 20px;
-    @include media-down(sm) {
-      max-width: 74%;
-    }
-    @include media-down(xs) {
-      max-width: 100%;
-    } 
-  }
-}
-.c-contact {
-  position: relative;
-  background-color: #0A6397;
-  margin-top: 105px;
-  @include media-down(sm) {
-    margin-top: 120px;
-  }
-  @include media-down(xs) {
-    padding-top: 40px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 202px;
-    clip-path: polygon(0 95%, 100% 0, 100% 100%, 0 99%);
-    background-color: #0A6397;
-    top: -198px;
-    @include media-down(xs) {
-      clip-path: polygon(0 95%, 100% 16%, 100% 100%, 0 99%);
-    } 
-  }
-  &__wrap {
-    padding-bottom: 50px;
-    position: relative;
-    display: grid;
-    grid-template-areas: 
-    "zerro one"
-    "two three"
-    "four five"
-    "six seven"
-    "eight nine"
-    "ten ten";
-    @include media-down(lg) {
-      grid-template-areas: 
-    "zerro one"
-    "two three"
-    "four five"
-    "six eight"
-    "seven nine"
-    "ten ten";
-    }
-    @include media-down(sm) {
-      grid-template-areas: 
-    "zerro"
-    "one"
-    "two" 
-    "five"
-    "four" 
-    "nine"
-    "ten"; 
-    grid-row-gap: 20px;
-    }    
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    &--zerro {
-      grid-area: zerro;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector4.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        display: none;
-        @include media-down(md) {
-          display: block;
-          top: -70px;
-          right:  -300px;
-          width: 225px;
-        } 
-        @include media-down(sm) {
-          top: -38px;
-          left:  100px;
-          width: 150px;
-        } 
-        @include media-down(xs) {
-          top: -70px;
-          left:  61px;
-          width: 130px;
-        }   
-      }
-    }
-    &--one {
-      grid-area: one;
-      &::after {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector5.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: 30px;
-        right: -200px;
-        @include media-down(lg) {
-          width: 96px;
-          height: 20px;
-          top: 0px;
-          right: 170px;
-        }
-        @include media-down(md) {
-          width: 153px;
-          height: 20px;
-          top: -23px;
-          left: -82px;
-        }
-        @include media-down(sm) {
-          width: 70px;
-          height: 16px;
-          top: -77px;
-          left:  260px;
-        }
-        @include media-down(xs) {
-          top: -30px;
-          left:  0px;
-        }    
-      }
-    }
-    &--two {
-      grid-area: two;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector4.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: -70px;
-        left: 100px;
-        @include media-down(lg) {
-          bottom: -50px;
-          left: 80px;
-          width: 216px;
-          height: 25px;
-        }
-        @include media-down(sm) {
-          top: -50px;
-          left: 38px;
-          width: 109px;
-          height: 22px;
-        }
-        @include media-down(xs) {
-          top: -26px;
-          left: 38px;
-          width: 109px;
-          height: 22px;
-        }
-      }
-    }
-    &--three {
-      grid-area: three;
-      @include media-down(sm) {
-        display: none;
-       } 
-      &::after {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector4.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: 70px;
-        right: -80px;
-         @include media-down(lg) {
-          bottom: -0px;
-          right: 180px;
-          width: 216px;
-          height: 25px;
-        }
-        
-      }
-    }
-    &--four {
-      grid-area: four;
-      @include media-down(sm) {
-        display: none;
-       } 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector4.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: -60px;
-        left: -280px;
-        @include media-down(lg) {
-          display: none;
-        }
-      }
-      &::after {
-        position: absolute;
-        content: "";
-        width: 96px;
-        height: 20px;
-        background-image: url('../img/vector6.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: -120px;
-        left: -80px;
-        @include media-down(lg) {
-          top: 90px;
-          left: 180px;
-          width: 216px;
-          height: 25px;
-        }
-      }
-    }
-    &--five {
-      grid-area: five;
-      &::after {
-        position: absolute;
-        content: "";
-        width: 96px;
-        height: 20px;
-        background-image: url('../img/vector6.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        bottom: 70px;
-        right: -150px;
-        @include media-down(lg) {
-          bottom: -90px;
-          left: 142px;
-          width: 216px;
-          height: 25px;
-        }
-        @include media-down(sm) {
-          bottom:  -26px;
-          left: 273px;
-          height: 18px;
-        }
-        @include media-down(xs) {
-          bottom:  -12px;
-          left: 106px;
-          height: 18px;
-        }
-      }
-    }
-    &--seven {
-      grid-area: seven;
-      position: relative;
-      @include media-down(sm) {
-        display: none;
-       } 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 96px;
-        height: 20px;
-        background-image: url('../img/vector6.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        top: 0px;
-        left: 180px;
-        @include media-down(lg) {
-          display: none;
-        }
-      }
-    }
-    &--eight {
-      grid-area: eight;
-      @include media-down(sm) {
-        display: none;
-       } 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector4.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        top: -20px;
-        left: -220px;
-        @include media-down(lg) {
-          display: none;
-        }
-      }
-      &::after {
-        position: absolute;
-        content: "";
-        width: 96px;
-        height: 20px;
-        background-image: url('../img/vector6.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        top: 26px;
-        left: -290px;
-        @include media-down(lg) {
-          display: none;
-        }
-      }
-    }
-    &--nine {
-      grid-area: nine;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 290px;
-        height: 35px;
-        background-image: url('../img/vector5.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        top: 0px;
-        left: -300px;
-        @include media-down(lg) {
-          top: -50px;
-          left: 246px;
-          width: 217px;
-        }
-        @include media-down(sm) {
-          top: -22px;
-          left: 266px;
-          width: 217px;
-        }
-        @include media-down(xs) {
-          display: none;
-        }
-      }
-    }
-    &--ten {
-      grid-area: ten;
-      margin: 40px auto 0;
-      @include media-down(xs) {
-        margin: 22px auto 0;
-       }
-    }
-  }
-}
-.c-info {
-  &__content {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 80px;
-    @include media-down(lg) {
-      padding-right: 60px;
-    }
-    @include media-down(md) {
-      padding-right: 0px;
-    }
-  }
-  &__wrap {
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    @include media-down(sm) {
-      grid-template-columns: 134px 1fr;
-      grid-column-gap: 20px;
-    }
-    @include media-down(xs) {
-      grid-template-columns: 60px 1fr;
-    }
-  }
-  &__number {
-    font-size: 130px;
-    text-shadow: -1px 1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff;
-    text-align: center;
-    color: #0A6397;
-    @include media-down(sm) {
-      font-size: 24px;
-    }
-  }
-  &__title {
-    margin: 0;
-  }
-}
-.c-visual {
-  &__img {
-    margin-left: 40px;
-    width: 336px;
-    height: 100px;
-    
-    &--ship {
-      position: absolute;
-      top: -5px;
-      left: 110px;
-      width: 752px;
-      height: 312px;
-      z-index: 6;
-      @include media-down(lg) {
-       top: 0;
-       left: 0;
-       width: 543px;
-       height: 170px;
-      }
-    }
-  }
-}
-.c-head {
-  &__title {
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 53px;
-    color: #0A6397;
-    white-space: nowrap;
-    @include media-down(md) {
-      font-size: 36px;
-      line-height: 46px;
-    }
-    @include media-down(sm) {
-      font-size: 24px;
-      line-height: 46px;
-    }
-  }
-  &__link {
-    color: #3C464E;
-    text-transform: capitalize;
-  }
-  &__name {
-    margin-bottom: 24px;
-  }
-}
-.man {
-  position: absolute;
-  left: -26px;
-  top: -500px;
-  z-index: 9;
-  @include media-down(md) {
-    width: 259px;
-    height: 505px;
-    top: -430px;
-  }
-  @include media-down(sm) {
-    width: 137px;
-    height: 266px;
-    top: -270px;
-    left: 360px;
-  }
-  @include media-down(xs) {
-    width: 137px;
-    height: 266px;
-    top: -290px;
-    left: 163px;
-  }
-}
-.f-contact {
-  position: relative;  
-  &__wrap {
-    display: flex;
-    justify-content: space-between;      
-  }
-  &__item:nth-child(5) {
-    @include media-down(lg) {
-      display: none;
-    }
-  }
-  &__item:nth-child(4) {
-    @include media-down(md) {
-      display: none;
-    }
-  }
-  &__item:nth-child(3) {
-    @include media-down(sm) {
-      display: none;
-    }
-  }
-  &__item:nth-child(6) {
-    @include media-down(xs) {
-      display: none;
-    }
-  }
-}
-*/

@@ -261,7 +261,7 @@
                 <div class="c-visual__cover">
                   <picture class="c-visual__picture">
                     <source srcset="img/man.webp 1x, img/man@2x.webp 2x" type="image/webp">
-                    <img src="img/man.png" srcset="img/man@2x.png 2x" alt="мужчина в костюме" class="man">
+                    <img src="img/man.png" srcset="img/man@2x.png 2x" alt="мужчина в костюме" class="c-visual__img">
                   </picture>
                 </div>
               </div>
@@ -345,14 +345,14 @@
           </div>
         </div>
         {% set svgList = [
-        {mod: "c-svg__item--plane", img: "img/svg/sprite.svg#plane-litl"},
+        {mod: "c-svg__item--plane", img: "img/svgcolor/sprite.svg#plane-litl"},
         {mod: "c-svg__item--cloud1", img: "img/svg/sprite.svg#vector1"},
         {mod: "c-svg__item--cloud2", img: "img/svg/sprite.svg#vector2"},
         {mod: "c-svg__item--cloud3", img: "img/svg/sprite.svg#vector2"},
         {mod: "c-svg__item--cloud4", img: "img/svg/sprite.svg#vector1"},
         {mod: "c-svg__item--cloud5", img: "img/svg/sprite.svg#vector2"},
         {mod: "c-svg__item--cloud6", img: "img/svg/sprite.svg#vector2"},
-        {mod: "c-svg__item--ship", img: "img/svg/sprite.svg#ship2"},
+        {mod: "c-svg__item--ship", img: "img/svgcolor/sprite.svg#ship2"},
         {mod: "c-svg__item--cloud7", img: "img/svg/sprite.svg#vector1"},
         {mod: "c-svg__item--cloud8", img: "img/svg/sprite.svg#vector2"},
         {mod: "c-svg__item--cloud9", img: "img/svg/sprite.svg#vector1"},
@@ -730,124 +730,3 @@
 </body>
 
 </html>
-<!--
-  <section class="contact">
-        <div class="contact__head c-head">
-          <h2 class="c-head__title">
-            Мы<br> за долгосрочные<br> деловые отношения!
-          </h2>
-          <div class="c-head__name">
-            <strong>Крат<br> Григорий Михайлович</strong>
-          </div>
-          <div class="c-head__phone">
-            <a href="#" class="c-head__link">Директор ООО «Трансис»<br> +375 29 208 91 91</a>
-          </div>
-        </div>
-        <div class="c-contact">
-          <div class="container">
-            <div class="c-contact__wrap">
-              <div class="c-contact__item c-contact__item--zerro  c-visual">
-                <div class="c-visual__cover">
-                  <picture class="c-visual__picture">
-                    <source srcset="img/man.webp 1x, img/man@2x.webp 2x" type="image/webp">
-                    <img src="img/man.png" srcset="img/man@2x.png 2x" alt="мужчина в костюме" class="man">
-                  </picture>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--one c-info">
-                <div class="c-info__wrap">
-                  <div class="c-info__number">1</div>
-                  <div class="c-info__content">
-                    <h3 class="c-info__title">Экономия и деловой подход</h3>
-                    <p class="c-info__text">
-                      1-ю перевозку выполняем по себестоимости..Вы оцениваете качество нашей
-                      работы.Вносите правки, если это необходимо.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--two c-info">
-                <div class="c-info__wrap">
-                  <div class="c-info__number">2</div>
-                  <div class="c-info__content">
-                    <h3 class="c-info__title">Компетентность</h3>
-                    <p class="c-info__text">
-                      Исключаем увеличение ставки и непредвиденные расходы в процессе перевозки за счет детальной
-                      проработки маршрута.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--three c-visual">
-                <div class="c-visual__cover">
-                  <img src="img/plane-litl.svg" alt="самолёт" class="c-visual__img">
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--four c-visual"></div>
-              <div class="c-contact__item c-contact__item--five c-info">
-                <div class="c-info__wrap">
-                  <div class="c-info__number">3</div>
-                  <div class="c-info__content">
-                    <h3 class="c-info__title">Ответсвенность</h3>
-                    <p class="c-info-content__text">
-                      Несогласованные расходы на этапе заключения договора ложатся на нас.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--six c-info">
-                <div class="c-info__wrap">
-                  <div class="c-info__number">4</div>
-                  <div class="c-info__content">
-                    <h3 class="c-info__title">Надежность</h3>
-                    <p class="c-info__text">
-                      Согласовываем ставку исходя из Ваших условий, фиксируем стоимость в договоре.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--seven c-visual">
-                <div class="c-visual__cover c-visual__cover--ship">
-                  <img src="img/ship2.svg" alt="фон корабля" class="c-visual__img c-visual__img--ship">
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--eight c-visual"></div>
-              <div class="c-contact__item c-contact__item--nine c-info">
-                <div class="c-info__wrap">
-                  <div class="c-info__number">5</div>
-                  <div class="c-info__content">
-                    <h3 class="c-info__title">Лояльность </h3>
-                    <p class="c-info__text">
-                      В случае нарушения договоренностей (опоздания, простои, срывы и т.д.) обсуждаем штрафные санкции и
-                      меняем условия договора в пользу заказчика на любом этапе перевозки.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="c-contact__item c-contact__item--ten h-button">
-                <button class="h-button__btn h-button__btn--blue">Оцените качество наших услуг</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contact__food f-contact">
-          {% set contactList = [
-          {img: "img/photo1.jpg", alt: "грузовик"},
-          {img: "img/photo2.jpg", alt: "грузовик"},
-          {img: "img/photo3.jpg", alt: "грузовик"},
-          {img: "img/photo4.jpg", alt: "грузовик"},
-          {img: "img/photo5.jpg", alt: "грузовик"},
-          {img: "img/photo6.jpg", alt: "грузовик"},
-          ] %}
-          <div class="f-contact__wrap">
-            {% for contactItem in contactList %}
-            <div class="f-contact__item f-visual">
-              <div class="f-visual__cover">
-                <img src="{{ contactItem.img }}" alt="{{ contactItem.alt }}" class="f-visual__img">
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </section>
--->
