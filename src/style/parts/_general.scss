@@ -1164,22 +1164,43 @@ body {
   overflow: hidden;
   position: relative;
   margin-top: 76px;
+  @include media-down(sm) {
+    background: linear-gradient(171deg, white, white 22.6%, #0A6397 22.7%, #0A6397 100%);
+  }
+  @include media-down(xs) {
+    background: linear-gradient(171deg, white, white 27%, #0A6397 27.1%, #0A6397 100%);
+    margin-top: 0;
+  }
+  &__main {
+    @include media-down(xs) {
+     margin-top: 140px;
+    }
+  }
 }
 .c-header {
   &__wrap {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
   }
   &__content {
-    margin-top: 40px;
+    margin-top: 20px;
+    @include media-down(xs) {
+      flex-basis: 100%;
+    }
   }
 }
 .c-visual {
   &__img {
-    @include media-down(md) {
-      width: 259px;
+    @include media-down(xs) {
+      width: 137px;
     }
+  }
+  @include media-down(xs) {
+    position: absolute;
+    top: 164px;
+    right: -23px;
   }
 }
 .c-head {
@@ -1212,14 +1233,23 @@ body {
     grid-template-columns: 1fr;
     margin-top: -200px;
     padding-bottom: 40px;
+    @include media-down(sm) {
+      margin-top: 0px;
+    }
   }
   &__item {
     max-width: 50%;
+    @include media-down(sm) {
+      min-width: 100%;
+    }
   }
   &__item:nth-child(1),
   &__item:nth-child(3),
   &__item:nth-child(5) {
     justify-self: end;
+    @include media-down(sm) {
+     justify-self: start;
+    }
   }
   &__item:last-child {
     margin: 0 auto;
@@ -1281,6 +1311,9 @@ body {
         width: 238px;
         height: 74px;
       }
+      @include media-down(sm) {
+        display: none;
+       }
     }
     &--cloud1 {
       top: 41%;
@@ -1294,6 +1327,16 @@ body {
         height: 26px;
         transform: rotateY(180deg);
       }
+      @include media-down(sm) {
+        top: 24%;
+        right: 24%;
+      }
+      @include media-down(xs) {
+        top: 27%;
+        right: 32%;
+        width: 173px;
+        height: 20px;
+      }
     }
     &--cloud2 {
       top: 36%;
@@ -1306,6 +1349,16 @@ body {
         width: 154px;
         height: 30px;
       }
+      @include media-down(sm) {
+        top: 39%;
+        left: 22%;
+        width: 109px;
+        height: 22px;
+      }
+      @include media-down(xs) {
+        top: 42%;
+        left: 66%;
+      }
     }
     &--cloud3 {
       top: 47%;
@@ -1317,6 +1370,16 @@ body {
         right: 10%;
         width: 80px;
         height: 16px;
+      }
+      @include media-down(sm) {
+        top: 27%;
+        right: 50%;
+        width: 80px;
+        height: 16px;
+      }
+      @include media-down(xs) {
+        top: 29%;
+        right: 70%;
       }
     }
     &--cloud4 {
@@ -1331,6 +1394,9 @@ body {
         height: 26px;
         transform: rotateY(180deg);
       }
+      @include media-down(sm) {
+        display: none;
+      }
     }
     &--cloud5 {
       top: 52%;
@@ -1344,6 +1410,15 @@ body {
         width: 132px;
         height: 26px;
       }
+      @include media-down(sm) {
+        top: 50%;
+        left: 70%;
+        width: 132px;
+        height: 26px;
+      }
+      @include media-down(xs) {
+        display: none;
+      }
     }
     &--cloud6 {
       top: 58%;
@@ -1352,6 +1427,15 @@ body {
       height: 22px;
       @include media-down(lg) {
         top: 60%;
+      }
+      @include media-down(sm) {
+        top: 59%;
+        right: 62%;
+        width: 110px;
+        height: 22px;        
+      }
+      @include media-down(xs) {
+        display: none;
       }
     }
     &--ship {
@@ -1366,6 +1450,9 @@ body {
         width: 544px;
         height: 172px;
       }
+      @include media-down(sm) {
+        display: none;
+      }
     }
     &--cloud7 {
       top: 62%;
@@ -1378,6 +1465,9 @@ body {
         width: 216px;
         height: 26px;
         transform: rotateY(180deg);
+      }
+      @include media-down(sm) {
+        display: none;
       }
     }
     &--cloud8 {
@@ -1408,12 +1498,9 @@ body {
         left: 1%;
         width: 110px;
         height: 22px;
-        @include media-down(lg) {
-          top: 69%;
-          left: 34%;
-          width: 72px;
-          height: 16px;
-        }
+      }
+      @include media-down(sm) {
+        display: none;
       }
     }
     &--cloud11 {
