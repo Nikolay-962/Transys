@@ -2408,13 +2408,19 @@ body
 
     .page-top__content
     {
-        max-width: 53%;
+        max-width: 70%;
+        padding-top: 160px;
     }
 
     .content__text
     {
         font-size: 14px;
         line-height: 17px;
+    }
+
+    .content__button
+    {
+        margin-top: 50px;
     }
 
     .advantages
@@ -2959,6 +2965,11 @@ body
         justify-self: start;
     }
 
+    .c-main__item:last-child
+    {
+        text-align: center;
+    }
+
     .c-info__wrap
     {
         grid-template-columns: 134px 1fr;
@@ -3327,12 +3338,15 @@ body
 
     .c-info__wrap
     {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 40px 1fr;
+        grid-column-gap: 0;
     }
 
     .c-info__number
     {
         font-size: 24px;
+
+        text-align: left;
     }
 
     .c-svg__item--cloud1
@@ -3346,7 +3360,7 @@ body
 
     .c-svg__item--cloud2
     {
-        top: 42%;
+        top: 42.6%;
         left: 66%;
     }
 
@@ -3362,6 +3376,11 @@ body
     }
 
     .c-svg__item--cloud6
+    {
+        display: none;
+    }
+
+    .c-svg__item--cloud11
     {
         display: none;
     }

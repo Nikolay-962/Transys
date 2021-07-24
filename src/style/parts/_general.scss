@@ -57,7 +57,8 @@ body {
     max-width: 46%;
     padding-top: 200px;
     @include media-down(md) {
-      max-width: 53%;      
+      max-width: 70%; 
+      padding-top: 160px;     
     }
     @include media-down(xs) {
       max-width: 80%;
@@ -119,6 +120,9 @@ body {
   }
   &__button {
     margin-top: 80px;
+    @include media-down(md) {
+      margin-top: 50px;
+    }
     @include media-down(xs) {
       margin-top: 30px;
     }
@@ -1254,6 +1258,9 @@ body {
   &__item:last-child {
     margin: 0 auto;
     padding: 40px 0;
+    @include media-down(sm) {
+      text-align: center;
+    }
   }
 }
 .c-info {
@@ -1280,7 +1287,8 @@ body {
       grid-column-gap: 20px;
     }
     @include media-down(xs) {
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 40px 1fr;
+      grid-column-gap: 0px;
     }
   }
   &__number {
@@ -1290,6 +1298,7 @@ body {
     color: #0A6397;
     @include media-down(xs) {
       font-size: 24px;
+      text-align: left;
     }
   }
   &__title {
@@ -1356,7 +1365,7 @@ body {
         height: 22px;
       }
       @include media-down(xs) {
-        top: 42%;
+        top: 42.6%;
         left: 66%;
       }
     }
@@ -1513,6 +1522,9 @@ body {
         left: 26%;
         width: 72px;
         height: 16px;
+      }
+      @include media-down(xs) {
+        display: none;
       }
     }
   }
