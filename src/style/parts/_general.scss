@@ -57,7 +57,7 @@ body {
     max-width: 46%;
     padding-top: 200px;
     @include media-down(md) {
-      max-width: 70%; 
+      max-width: 64%; 
       padding-top: 160px;     
     }
     @include media-down(xs) {
