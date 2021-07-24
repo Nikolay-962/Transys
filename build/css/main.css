@@ -2409,7 +2409,7 @@ body
     .page-top__content
     {
         max-width: 64%;
-        padding-top: 160px;
+        padding-top: 110px;
     }
 
     .content__text
@@ -3216,7 +3216,6 @@ body
     .page-top__content
     {
         max-width: 80%;
-        padding-top: 110px;
     }
 
     .content__button

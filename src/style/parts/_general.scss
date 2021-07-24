@@ -58,11 +58,10 @@ body {
     padding-top: 200px;
     @include media-down(md) {
       max-width: 64%; 
-      padding-top: 160px;     
+      padding-top: 110px;     
     }
     @include media-down(xs) {
       max-width: 80%;
-      padding-top: 110px;
     }
   }
   &__connection {
