@@ -9,10 +9,8 @@ buttonMenu.addEventListener('click', () => {
   buttonMenu.classList.toggle('open');
   if (menuList.classList.contains('show')) {
     menuList.classList.remove('show');
-    //adresMenu.classList.remove('active');
   } else {
     menuList.classList.add('show');
-    //adresMenu.classList.add('active');
   }
 });
 

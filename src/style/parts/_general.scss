@@ -720,13 +720,13 @@ body {
         position: absolute;
         content: "";
         width: 214px;
-        height: 25px;
+        height: 27px;
         background-image: url('../img/vector1.svg');
         top: -70px;
         left: -100px;
         @include media-down(md) {
           top: -90px;
-        left: -20px;
+          left: -20px;
         }
       }
     }
@@ -1504,7 +1504,7 @@ body {
       }
     }
     &--cloud11 {
-      top: 67%;
+      top: 68%;
       left: 32%;
       width: 212px;
       height: 41px;
